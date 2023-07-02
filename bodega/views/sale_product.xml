@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="bodega.form_bodega_sale_product" model="ir.ui.view">
+            <field name="name">bodega.form_bodega_sale_product</field>
+            <field name="model">bodega.sale_product</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                         <h2>1.Producto</h2>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="description"/>
+                            </group>
+
+                            <group>
+                                <field name="quanty"/>
+                                <field name="price_unit"/>
+                                <field name="price_total"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="bodega.tree_bodega_sale_product" model="ir.ui.view">
+            <field name="name">bodega.tree_bodega_sale_product</field>
+            <field name="model">bodega.sale_product</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="quanty"/>
+                    <field name="price_unit"/>
+                    <field name="price_total"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="bodega.action_bodega_sale_product" model="ir.actions.act_window">
+            <field name="name">Venta Producto</field>
+            <field name="res_model">bodega.sale_product</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+
+    </data>
+</odoo>
