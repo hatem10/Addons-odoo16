@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--Secuencia de factura para el model bodega.detail.invoice-->
+        <record id="bodega.sequence_invoice_bodega_detail_invoice" model="ir.sequence">
+            <field name="name">Factura Detalle Factura</field>
+            <field name="code">invoice.detail_invoice</field>
+            <field name="implementation">no_gap</field>
+            <field name="prefix">N° 001-</field>
+            <field name="padding">7</field>
+            <field name="suffix">-%(year)s</field>
+            <field name="number_increment">1</field>
+            <field name="number_next_actual">1</field>
+        </record>
+    </data>
+</odoo>

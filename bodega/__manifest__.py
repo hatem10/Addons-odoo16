@@ -9,7 +9,9 @@
         'views/purchase_product.xml',
         'views/sale_product.xml',
         'views/detail_invoice.xml',
-        'views/menu.xml'
+        'views/menu.xml',
+        #sequence
+        'data/bodega_detail_invoice.xml'
     ]
 
 }

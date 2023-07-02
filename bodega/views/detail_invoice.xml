@@ -8,7 +8,19 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
-                         <h2>1.Factura</h2>
+                            <div style="display:flex; justify-content:space-between;">
+                                <div>
+                                    <h1>CONFECCIONES "SAN JORGE"</h1>
+                                </div>
+                                <div style="border:2px black solid; border-radius:5px; text-align:center">
+                                    <h2>R.U.C : 202478598512</h2>
+                                    <h1>FACTURA</h1>
+                                    <h2>
+                                        <field name="name"/>
+                                    </h2>
+                                </div>
+                            </div>
+
                         <group>
                             <group>
                                 <field name="customer"/>
@@ -20,6 +32,7 @@
                             </group>
                         </group>
                          <!--Tree-->
+                         <h2>Detalle Producto</h2>
                          <field name="sale_product_id">
                             <tree editable="bottom">
                                 <field name="quanty"/>
@@ -29,6 +42,18 @@
                                 <field name="price_total"/>
                             </tree>
                          </field>
+
+                         <div style="display:flex;justify-content:flex-end;">
+                            <div>
+                                <group>
+                                    <group style="width:100%; text-align:center;">
+                                        <field name="sub_total"/>
+                                        <field name="igv"/>
+                                        <field name="total"/>
+                                    </group>
+                                </group>
+                            </div>
+                         </div>
                     </sheet>
                 </form>
             </field>
@@ -43,7 +68,7 @@
                     <field name="customer"/>
                     <field name="ruc"/>
                     <field name="address"/>
-                    <field name="sale_product_id"/>
+                    <field name="sale_product_id" widget="many2many_tags"/>
                 </tree>
             </field>
         </record>
