@@ -8,6 +8,7 @@
         #views
         'views/purchase_product.xml',
         'views/sale_product.xml',
+        'views/detail_invoice.xml',
         'views/menu.xml'
     ]
 

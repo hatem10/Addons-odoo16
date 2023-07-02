@@ -22,5 +22,11 @@
                   action="bodega.action_bodega_sale_product"
                   sequence="2"/>
 
+        <menuitem id="submenu_detail_invoice"
+                  name="Detalle Factura"
+                  parent="menu_bodega"
+                  action="bodega.action_bodega_detail_invoice"
+                  sequence="2"/>
+
     </data>
 </odoo>
