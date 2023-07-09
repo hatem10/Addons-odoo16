@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-
+<!-- 
         <record id="bodega.form_bodega_sale_product" model="ir.ui.view">
             <field name="name">bodega.form_bodega_sale_product</field>
             <field name="model">bodega.sale_product</field>
@@ -13,6 +13,7 @@
                             <group>
                                 <field name="name"/>
                                 <field name="description"/>
+                                <field name="date_sale"/>
                             </group>
 
                             <group>
@@ -24,15 +25,16 @@
                     </sheet>
                 </form>
             </field>
-        </record>
+        </record> -->
 
         <record id="bodega.tree_bodega_sale_product" model="ir.ui.view">
             <field name="name">bodega.tree_bodega_sale_product</field>
             <field name="model">bodega.sale_product</field>
             <field name="arch" type="xml">
-                <tree>
+                <tree editable="bottom">
                     <field name="name"/>
                     <field name="description"/>
+                    <field name="date_sale"/>
                     <field name="quanty"/>
                     <field name="price_unit"/>
                     <field name="price_total"/>

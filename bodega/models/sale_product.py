@@ -1,4 +1,5 @@
 from odoo import models,fields,api,exceptions
+from datetime import date
 
 class SaleProduct(models.Model):
     _name='bodega.sale_product'
@@ -10,6 +11,7 @@ class SaleProduct(models.Model):
     price_unit=fields.Float(string="Precio/Unit")
     price_total=fields.Float(string="Total")
     detail_invoice_id=fields.Many2one(comodel_name="bodega.detail_invoice")
+    date_sale=fields.Date(string="Fecha/Venta",default=lambda self:date.today())
 
     @api.onchange('quanty','price_unit')
     def onchange_price_total(self):

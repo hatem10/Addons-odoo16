@@ -2,7 +2,7 @@
 <odoo>
     <data>
 
-        <record id="bodega.form_bodega_purchase_product" model="ir.ui.view">
+        <!-- <record id="bodega.form_bodega_purchase_product" model="ir.ui.view">
             <field name="name">bodega.form_bodega_purchase_product</field>
             <field name="model">bodega.purchase_product</field>
             <field name="arch" type="xml">
@@ -13,6 +13,9 @@
                             <group>
                                 <field name="name"/>
                                 <field name="description"/>
+                                <field name="date_purchase"/>
+                                <field name="quanty_sale_product"/>
+                                <field name="stock_product"/>
                             </group>
 
                             <group>
@@ -24,16 +27,20 @@
                     </sheet>
                 </form>
             </field>
-        </record>
+        </record> -->
 
         <record id="bodega.tree_bodega_purchase_product" model="ir.ui.view">
             <field name="name">bodega.tree_bodega_purchase_product</field>
             <field name="model">bodega.purchase_product</field>
             <field name="arch" type="xml">
-                <tree>
+                <tree editable="bottom">
                     <field name="name"/>
                     <field name="description"/>
+                    <field name="date_purchase"/>
                     <field name="quanty"/>
+                    <field name="quanty_sale_product"/>
+                    <field name="sale_product_id" invisible="1"/>   
+                    <field name="stock_product"/>
                     <field name="price_unit"/>
                     <field name="price_total"/>
                 </tree>
