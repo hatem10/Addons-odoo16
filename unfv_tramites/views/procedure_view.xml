@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <!--View Form-->
+        <record id="procedure_view_form" model="ir.ui.view">
+            <field name="name">procedure.view_form</field>
+            <field name="model">procedure</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" placeholder="Ingrese Nombre"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="procedure_view_tree" model="ir.ui.view">
+            <field name="name">procedure.view.tree</field>
+            <field name="model">area</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <!--Action-->
+        <record id="procedure_view_action" model="ir.actions.act_window">
+            <field name="name">Tramites</field>
+            <field name="res_model">procedure</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>

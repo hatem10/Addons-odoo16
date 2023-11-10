@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <!--Menu-->
+        <menuitem id="tramite"
+                  name="Tramites"
+                  />
+        <!--SubMenu-->
+        <menuitem id="submenu_area"
+                  name="Area"
+                  parent="tramite"
+                  action="area_view_action"
+                  sequence="1"/>
+
+        <menuitem id="submenu_procedure"
+                  name="Tramites"
+                  parent="tramite"
+                  action="procedure_view_action"
+                  sequence="2"/>
+    </data>
+</odoo>
