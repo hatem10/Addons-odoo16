@@ -1,0 +1,153 @@
+<odoo>
+    <data>
+        <!--View Form-->
+        <record id="formulario_procedure_view_form" model="ir.ui.view">
+            <field name="name">formulario.procedure.view_form</field>
+            <field name="model">formulario.procedure</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                        <button name="btn_draft" string="Borrador" type="object" class="oe_highlight"/>
+                        <button name="btn_approved" string="Aprobado" type="object" class="oe_highlight"/>
+                        <button name="btn_done" string="Realizado" type="object" class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                        <div>
+                            <h2>
+                                <field name="code_procedure"/>
+                            </h2>h
+                        </div>
+
+                        <group>
+                            <group>
+                                <field name="name" placeholder="SELECCIONAR TRAMITE"/>
+                            </group>
+                            <group>
+                                <field name="directed" placeholder="SELECCIONAR DEPENDENCIA"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group style="width:33%">
+                                <field name="type_solicitant" placeholder="SELECCIONAR TIPO TRAMITE"/>
+                            </group>
+                            <group style="width:33%">
+                                <field name="type_document" placeholder="SELECCIONAR DOCUMENTO"/>
+                            </group>
+                            <group style="width:33%">
+                                <field name="number_document" placeholder="NUMERO DOCUMENTO"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group style="width:33%">
+                                <field name="father_last_name" placeholder="APELLIDO PATERNO"/>
+                            </group>
+                            <group style="width:33%">
+                                <field name="mother_last_name" placeholder="APELLIDO MATERNO"/>
+                            </group>
+                            <group style="width:33%">
+                                <field name="name_solicitant" placeholder="NOMBRES"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group style="width:33%">
+                                <field name="facultad" placeholder="INGRESE FACULTAD"/>
+                            </group>
+                            <group style="width:33%">
+                                <field name="school_solicitant" placeholder="INGRESE ESCUELA"/>
+                            </group>
+                            <group style="width:33%">
+                                <field name="code_solicitant" placeholder="INGRESE CODIGO"/>
+                            </group>
+                        </group>
+
+                        <group>
+
+                            <group style="width:50%">
+                                <field name="country_id"/>
+                            </group>
+                            <group style="width:50%">
+                                <field name="departament" placeholder="INGRESE DEPARTAMENTO"/>
+                            </group>
+                            <!--<group style="width:33%">
+                                <field name="school_solicitant"/>
+                            </group>
+                            <group style="width:33%">
+                                <field name="code_solicitant"/>
+                            </group>-->
+                        </group>
+
+                        <group>
+                            <group>
+                                <field name="address" placeholder="INGRESE DIRECCION"/>
+                            </group>
+                            <group>
+                                <field name="number_departament"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group style="width=50%">
+                                <field name="phone" placeholder="INGRESE TELEFONO"/>
+                            </group>
+                            <group style="width=50%">
+                                <field name="cell_phone" placeholder="INGRESE CELULAR"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group>
+                                <field name="email" placeholder="INGRESE CORREO"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group style="width:100%">
+                                <field name="fundament_solicitud" placeholder="INGRESE EL FUNDAMENTO"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group>
+                                <field name="document_adjunt"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group>
+                                <field name="document_digital"/>
+                            </group>
+                            <group>
+                                <field name="number_folios"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="formulario_procedure_view_tree" model="ir.ui.view">
+            <field name="name">formulario.procedure.view.tree</field>
+            <field name="model">formulario.procedure</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code_procedure"/>
+                    <field name="name"/>
+                    <field name="directed"/>
+                    <field name="state" widget="badge" decoration-danger="state == 'draft'"
+                           decoration-muted="state == 'approved'" decoration-success="state == 'done'"/>
+                </tree>
+            </field>
+        </record>
+        <!--Action-->
+        <record id="formulario_procedure_view_action" model="ir.actions.act_window">
+            <field name="name">FUT</field>
+            <field name="res_model">formulario.procedure</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>

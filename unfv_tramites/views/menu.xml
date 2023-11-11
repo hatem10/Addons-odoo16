@@ -8,13 +8,30 @@
         <menuitem id="submenu_area"
                   name="Area"
                   parent="tramite"
-                  action="area_view_action"
+                  action="unfv_tramites.area_view_action"
                   sequence="1"/>
 
-        <menuitem id="submenu_procedure"
+        <menuitem id="submenu_facultad"
+                  name="Facultad"
+                  parent="tramite"
+                  action="unfv_tramites.facultad_view_action"
+                  sequence="2"/>
+        <!--Menu Tramite-->
+        <menuitem id="submenu_tramites"
                   name="Tramites"
                   parent="tramite"
-                  action="procedure_view_action"
+                  sequence="3"
+                  />
+        <menuitem id="submenu_procedure"
+                  name="Tramite"
+                  parent="submenu_tramites"
+                  action="unfv_tramites.procedure_view_action"
+                  sequence="1"/>
+
+        <menuitem id="submenu_formulario_procedure"
+                  name="FUT"
+                  parent="submenu_tramites"
+                  action="unfv_tramites.formulario_procedure_view_action"
                   sequence="2"/>
     </data>
 </odoo>

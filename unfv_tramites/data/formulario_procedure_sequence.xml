@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="formulario_procedure_code_sequence" model="ir.sequence">
+            <field name="name">Secuencia de Numero Formulario Tramite</field>
+            <field name="code">code.procedure</field>
+            <field name="implementation">no_gap</field>
+            <field name="active">1</field>
+            <field name="prefix">ST</field>
+            <field name="suffix">-%(year)s</field>
+            <field name="padding">8</field>
+            <field name="number_increment">1</field>
+            <field name="number_next_actual">1</field>
+        </record>
+    </data>
+</odoo>

@@ -12,9 +12,13 @@
     ],
     "data":[
         #views
+        "views/facultad_view.xml",
         "views/area_view.xml",
         "views/procedure_view.xml",
-        "views/menu.xml"
+        "views/formulario_procedure_view.xml",
+        "views/menu.xml",
+        #data
+        "data/formulario_procedure_sequence.xml"
     ]
 
 }
