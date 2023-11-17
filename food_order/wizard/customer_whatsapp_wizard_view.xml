@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+        <record id="customer_whatsapp_wizard_view_form" model="ir.ui.view">
+            <field name="name">customer.whatsapp.wizard.view.form</field>
+            <field name="model">customer.whatsapp.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group style="width:50%">
+                                <field name="customer_id" readonly="1"/>
+                            </group>
+
+                            <group style="width:50%">
+                                <field name="cell_mobile"/>
+                            </group>
+
+                            <field name="message" placeholder="Ingrese el Mensaje"/>
+                        </group>
+
+                        <footer>
+                            <button name="send_message_whatsapp" string="Enviar" type="object" class="oe_highlight"/>
+                            <button special="cancel" string="Cancelar" class="oe_highlight"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

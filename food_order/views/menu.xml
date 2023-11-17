@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <menuitem id="menu_food_order"
+                  name="Pedido Comida"
+                  sequence="1"/>
+
+        <menuitem id="submenu_customer"
+                  name="Cliente"
+                  parent="menu_food_order"
+                  sequence="1"/>
+
+         <menuitem id="submenu_order_customer"
+                  name="Pedido"
+                  parent="submenu_customer"
+                  action="food_order.order_customer_view_action"
+                  sequence="1"/>
+
+        <menuitem id="submenu_order_customer_address"
+                  name="Direccion Entregas"
+                  parent="submenu_customer"
+                  action="food_order.order_customer_address_view_action"
+                  sequence="2"/>
+    </data>
+</odoo>
