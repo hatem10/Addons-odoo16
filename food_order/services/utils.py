@@ -7,3 +7,15 @@ TYPE_DOCUMENT = [
     (CARNET,"CARNET DE EXTANJERIA"),
     (PASAPORTE,"PASAPORTE")
 ]
+
+BORRADOR = "draft"
+REGISTRO = "register"
+PREPARACION = "preparation"
+REALIZADO = "done"
+
+TYPE_STATE = [
+    (BORRADOR,"Borrador"),
+    (REGISTRO,"Registrado"),
+    (PREPARACION,"En Preparacion"),
+    (REALIZADO,"Realizado")
+]

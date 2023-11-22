@@ -1,0 +1,190 @@
+<odoo>
+    <data>
+        <!--view Form-->
+        <record id="order_view_form" model="ir.ui.view">
+            <field name="name">order.view.form</field>
+            <field name="model">order</field>
+            <field name="arch" type="xml">
+                <form string="Formulario Pedido">
+
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                        <button name="btn_draft" string="Borrador" type="object" class="oe_highlight"/>
+                        <button name="btn_register" string="Registrar" type="object" class="oe_highlight" states="draft"/>
+                        <button name="btn_preparation" string="Preparacion" type="object" class="oe_highlight" states="register"/>
+                        <button name="btn_done" string="Realizado" type="object" class="oe_highlight" states="preparation"/>
+                    </header>
+
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="o_row">
+                                <h1>
+                                    <field name="name"/>
+                                </h1>
+                            </div>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="date"/>
+                                <field name="customer_id"/>
+                            </group>
+
+                            <group>
+                                <field name="address_id"/>
+                            </group>
+
+                            <separator string="Productos Pedidos"/>
+                            <field name="order_line_ids">
+                                <tree editable="bottom" string="Pedidos del Cliente">
+                                    <field name="product_id"/>
+                                    <field name="quanty"/>
+                                    <field name="unit_price"/>
+                                    <field name="subtotal"/>
+                                </tree>
+                            </field>
+                        </group>
+
+                    </sheet>
+
+                    <div class="oe_chatter">
+                         <field name="message_follower_ids"/>
+                         <field name="message_ids"/>
+                     </div>
+                </form>
+            </field>
+        </record>
+
+        <!--view Tree-->
+        <record id="order_view_tree" model="ir.ui.view">
+            <field name="name">order.view.tree</field>
+            <field name="model">order</field>
+            <field name="arch" type="xml">
+                <tree string="Lista Pedidos">
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="customer_id"/>
+                    <field name="address_id"/>
+                    <field name="state" widget="badge" decoration-danger="state == 'draft'"
+                           decoration-warning="state == 'register'" decoration-info="state == 'preparation'" decoration-success="state == 'done'"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--view search-->
+        <record id="order_view_search" model="ir.ui.view">
+            <field name="name">order.view.search</field>
+            <field name="model">order</field>
+            <field name="arch" type="xml">
+               <search>
+                   <field name="name"/>
+                   <!--Filter-->
+                   <filter name="filter_done" string="Realizados" domain="[('state','=','done')]"/>
+               </search>
+            </field>
+        </record>
+
+        <!--view Tree with Create-->
+        <!--<record id="order_view_tree_custom_2" model="ir.ui.view">
+            <field name="name">order.view.tree.custom.2</field>
+            <field name="model">order</field>
+            <field name="inherit_id" ref="food_order.order_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="create">1</attribute>
+                    <attribute name="delete">1</attribute>
+                </xpath>
+            </field>
+        </record>-->
+
+        <!--view Form with Create, Edit-->
+        <!--<record id="order_view_form_custom_2" model="ir.ui.view">
+            <field name="name">order.view.form.custom.2</field>
+            <field name="model">order</field>
+            <field name="inherit_id" ref="food_order.order_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="attributes">
+                    <attribute name="edit">1</attribute>
+                    <attribute name="delete">1</attribute>
+                </xpath>
+            </field>
+        </record>-->
+
+        <!--view Tree No  Create-->
+        <!--<record id="order_view_tree_custom_1" model="ir.ui.view">
+            <field name="name">order.view.tree.custom.1</field>
+            <field name="model">order</field>
+            <field name="inherit_id" ref="food_order.order_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="create">0</attribute>
+                    <attribute name="delete">0</attribute>
+                </xpath>
+            </field>
+        </record>-->
+
+        <!--view Form No Create,No Edit-->
+        <!--<record id="order_view_form_custom_1" model="ir.ui.view">
+            <field name="name">order.view.form.custom.1</field>
+            <field name="model">order</field>
+            <field name="inherit_id" ref="food_order.order_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="attributes">
+                    <attribute name="edit">0</attribute>
+                    <attribute name="delete">0</attribute>
+                </xpath>
+            </field>
+        </record>-->
+
+        <!--Action Pedidos-->
+        <record id="order_view_action" model="ir.actions.act_window">
+            <field name="name">Pedidos</field>
+            <field name="res_model">order</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="target">current</field>
+            <field name="context">
+                {
+                    'search_default_filter_done':True
+                }
+            </field>
+            <field name="help" type="html">
+                <p>
+                    Registre Información de Pedidos
+                </p>
+            </field>
+        </record>
+
+        <!--Action Pedidos Registrados-->
+        <record id="order_register_view_action" model="ir.actions.act_window">
+            <field name="name">Registrado</field>
+            <field name="res_model">order</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+            <field name="domain">
+                [('state','=','register')]
+            </field>
+        </record>
+
+        <!--Action Pedidos Preparación-->
+        <record id="order_preparation_view_action" model="ir.actions.act_window">
+            <field name="name">Preparación</field>
+            <field name="res_model">order</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+            <field name="domain">
+                [('state','=','preparation')]
+            </field>
+        </record>
+
+        <!--Action Pedidos Realizados-->
+        <record id="order_done_view_action" model="ir.actions.act_window">
+            <field name="name">Realizados</field>
+            <field name="res_model">order</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+            <field name="domain">
+                [('state','=','done')]
+            </field>
+        </record>
+
+    </data>
+</odoo>

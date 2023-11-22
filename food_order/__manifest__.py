@@ -9,15 +9,20 @@
         "mail"
     ],
     "data":[
+        # security
+        "security/res_groups.xml",
+        "security/ir.model.access.csv",
         #wizard
         "wizard/customer_whatsapp_wizard_view.xml",
         #views
         "views/order_customer_view.xml",
         "views/order_customer_address_view.xml",
+        "views/order_product_view.xml",
+        "views/order_view.xml",
         "views/menu.xml",
-        #security
-        "security/res_groups.xml",
-        "security/ir.model.access.csv"
+        #data
+        "data/order_product.xml",
+        "data/order.xml"
     ],
     "assets":{
         "web.assets_frontend":[],

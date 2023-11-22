@@ -2,6 +2,17 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 
 access_admin_order_customer,access.admin.order.customer,model_order_customer,group_admin_food_order,1,1,1,1
 access_admin_order_customer_address,access.admin.order.customer.address,model_order_customer_address,group_admin_food_order,1,1,1,1
+access_admin_order_product,access.admin.order.product,model_order_product,group_admin_food_order,1,1,1,1
+access_admin_order,access.admin.order,model_order,group_admin_food_order,1,1,1,1
+access_admin_order_line,access.admin.order.line,model_order_line,group_admin_food_order,1,1,1,1
 access_admin_customer_whatsapp_wizard,access.admin.customer.whatsapp.wizard,model_customer_whatsapp_wizard,group_admin_food_order,1,1,1,1
-access_user_order_customer,access.user.order.customer,model_order_customer,group_user_food_order,1,0,1,0
+
+access_kitchen_order,access.kitchen.order,model_order,group_kitchen_food_order,1,0,0,0
+access_kitchen_order_customer,access.kitchen.order.customer,model_order_customer,group_kitchen_food_order,1,0,0,0
+access_kitchen_order_customer_address,access.kitchen.order.customer.address,model_order_customer_address,group_kitchen_food_order,1,0,0,0
+access_kitchen_order_line,access.kitchen.order.line,model_order_line,group_kitchen_food_order,1,0,0,0
+
+
+
+
 

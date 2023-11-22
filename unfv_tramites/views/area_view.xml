@@ -29,6 +29,17 @@
             </field>
         </record>
 
+        <!--view search-->
+        <record id="area_view_search" model="ir.ui.view">
+            <field name="name">area.view.search</field>
+            <field name="model">area</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="code"/>
+                </search>
+            </field>
+        </record>
         <!--Action-->
         <record id="area_view_action" model="ir.actions.act_window">
             <field name="name">Areas</field>

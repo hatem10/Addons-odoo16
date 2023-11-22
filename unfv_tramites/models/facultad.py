@@ -2,7 +2,7 @@ from odoo import models,fields,api
 
 class Facultad(models.Model):
     _name = "facultad"
-
+    _description = "Lista de Facultades"
     name = fields.Char(string="Facultad")
     code = fields.Char(string="Codigo")
 

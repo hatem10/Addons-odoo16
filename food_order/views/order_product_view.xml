@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+        <!--view Form-->
+        <record id="order_product_view_form" model="ir.ui.view">
+            <field name="name">order.product.view.form</field>
+            <field name="model">order.product</field>
+            <field name="arch" type="xml">
+                <form string="Formulario Producto">
+                    <sheet>
+                        <div class="oe_row">
+                            <field name="image"  widget="image" class="oe_avatar"/>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="stock"/>
+                            </group>
+
+                            <group>
+                                <field name="price"/>
+                                <field name="discount" widget="percentage"/>
+                            </group>
+                        </group>
+
+                    </sheet>
+
+                    <div class="oe_chatter">
+                         <field name="message_follower_ids"/>
+                         <field name="message_ids"/>
+                     </div>
+                </form>
+            </field>
+        </record>
+
+        <!--view Tree-->
+        <record id="order_product_view_tree" model="ir.ui.view">
+            <field name="name">order.product.view.tree</field>
+            <field name="model">order.product</field>
+            <field name="arch" type="xml">
+                <tree string="Lista Productos">
+                    <field name="name"/>
+                    <field name="price"/>
+                    <field name="discount" widget="percentage"/>
+                    <field name="stock"/>
+                </tree>
+            </field>
+        </record>
+        <!--Action-->
+        <record id="order_product_view_action" model="ir.actions.act_window">
+            <field name="name">Producto</field>
+            <field name="res_model">order.product</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+            <field name="help" type="html">
+                <p>
+                    Registre Información de Producto
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

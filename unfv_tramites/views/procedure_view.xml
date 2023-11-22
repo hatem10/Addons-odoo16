@@ -26,6 +26,18 @@
                 </tree>
             </field>
         </record>
+
+
+        <!--view search-->
+        <record id="procedure_view_search" model="ir.ui.view">
+            <field name="name">procedure.view.search</field>
+            <field name="model">procedure</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
         <!--Action-->
         <record id="procedure_view_action" model="ir.actions.act_window">
             <field name="name">Tramites</field>

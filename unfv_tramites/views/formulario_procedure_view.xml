@@ -142,6 +142,22 @@
                 </tree>
             </field>
         </record>
+
+        <!--view search-->
+        <record id="formulario_procedure_view_search" model="ir.ui.view">
+            <field name="name">formulario.procedure.view.search</field>
+            <field name="model">formulario.procedure</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="code_procedure" string="Codigo"/>
+                    <field name="directed" string="Traime"/>
+
+                    <filter name="filter_state_approved" string="Borrador" domain="[('state','=','draft')]"/>
+                    <filter name="filter_state_approved" string="Aprobado" domain="[('state','=','approved')]"/>
+                    <filter name="filter_state_approved" string="Realizado" domain="[('state','=','done')]"/>
+                </search>
+            </field>
+        </record>
         <!--Action-->
         <record id="formulario_procedure_view_action" model="ir.actions.act_window">
             <field name="name">FUT</field>

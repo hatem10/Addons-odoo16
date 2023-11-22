@@ -7,10 +7,11 @@
         <menuitem id="submenu_customer"
                   name="Cliente"
                   parent="menu_food_order"
+                  groups="group_admin_food_order"
                   sequence="1"/>
 
-         <menuitem id="submenu_order_customer"
-                  name="Pedido"
+        <menuitem id="submenu_order_customer"
+                  name="Cliente"
                   parent="submenu_customer"
                   action="food_order.order_customer_view_action"
                   sequence="1"/>
@@ -20,5 +21,42 @@
                   parent="submenu_customer"
                   action="food_order.order_customer_address_view_action"
                   sequence="2"/>
+
+        <menuitem id="submenu_producto"
+                  name="Producto"
+                  parent="menu_food_order"
+                  action="food_order.order_product_view_action"
+                  groups="group_admin_food_order"
+                  sequence="2"/>
+
+        <menuitem id="submenu_pedido"
+                  name="Pedido"
+                  parent="menu_food_order"
+                  sequence="3"/>
+
+        <menuitem id="submenu_order"
+                  name="Pedidos"
+                  parent="submenu_pedido"
+                  action="food_order.order_view_action"
+                  groups="group_admin_food_order,group_kitchen_food_order"
+                  sequence="1"/>
+
+                <menuitem id="submenu_order_register"
+                  name="Registrados"
+                  parent="submenu_pedido"
+                  action="food_order.order_register_view_action"
+                  sequence="2"/>
+
+                <menuitem id="submenu_order_preparation"
+                  name="Preparación"
+                  parent="submenu_pedido"
+                  action="food_order.order_preparation_view_action"
+                  sequence="3"/>
+
+                <menuitem id="submenu_order_done"
+                  name="Realizado"
+                  parent="submenu_pedido"
+                  action="food_order.order_done_view_action"
+                  sequence="4"/>
     </data>
 </odoo>

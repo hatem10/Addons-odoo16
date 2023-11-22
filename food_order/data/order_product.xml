@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record id="order_product_chaufa" model="order.product">
+            <field name="name">Arroz Chaufa</field>
+            <field name="stock">50</field>
+            <field name="price">15</field>
+            <field name="discount">10</field>
+            <field name="image" type="base64" file="food_order/static/img/chaufa.png"/>
+        </record>
+
+        <record id="order_product_carapulcra" model="order.product">
+            <field name="name">Carapulcra</field>
+            <field name="stock">50</field>
+            <field name="price">10</field>
+            <field name="discount">10</field>
+            <field name="image" type="base64" file="food_order/static/img/carapulcra.png"/>
+        </record>
+    </data>
+</odoo>

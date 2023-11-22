@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <!--menu-->
+        <menuitem id="menu_hospital"
+                  name="Hospital"
+                  sequence="3"/>
+
+        <!--submenu-->
+        <menuitem id="submenu_hospital_patient"
+                  name="Pacientes"
+                  parent="menu_hospital"
+                  action="hospital_patient_view_action"
+                  sequence="1"/>
+
+    </data>
+</odoo>

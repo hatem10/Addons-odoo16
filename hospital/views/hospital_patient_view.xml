@@ -1,0 +1,65 @@
+<odoo>
+    <data>
+
+         <!--view form-->
+        <record id="hospital_patient_view_form" model="ir.ui.view">
+            <field name="name">hospital.patient.view.form</field>
+            <field name="model">hospital.patient</field>
+            <field name="arch" type="xml">
+                <form string="Formulario de Pacientes">
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="o_row">
+                                <field name="name" readonly="1"/>
+                            </div>
+                        </div>
+                        <group>
+                            <group style="width:50%">
+                                <field name="full_name"/>
+                                <field name="father_last_name"/>
+                                <field name="mother_last_name"/>
+                            </group>
+                            <group style="width:50%">
+                                <field name="date_birth"/>
+                                <field name="age"/>
+                                <field name="type_document"/>
+                                <field name="number_document"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--view tree-->
+        <record id="hospital_patient_view_tree" model="ir.ui.view">
+            <field name="name">hospital.patient.view.tree</field>
+            <field name="model">hospital.patient</field>
+            <field name="arch" type="xml">
+                <tree string="Lista de Pacientes">
+                    <field name="name"/>
+                    <field name="full_name"/>
+                    <field name="father_last_name"/>
+                    <field name="mother_last_name"/>
+                    <field name="date_birth"/>
+                    <field name="age"/>
+                    <field name="type_document"/>
+                    <field name="number_document"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--view action-->
+        <record id="hospital_patient_view_action" model="ir.actions.act_window">
+            <field name="name">Pacientes</field>
+            <field name="res_model">hospital.patient</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+            <field name="help" type="html">
+                <p>
+                    Registre Informacion de Pacientes
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

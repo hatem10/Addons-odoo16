@@ -1,0 +1,8 @@
+Migrando cards_culqi v14 a 16
+
+models
+v14                                         v16
+Metodos De pago                         Proveedores de Pago
+payment.adquirer                         payment.provider
+campo(provider)                          campo(code)
+payment.transaction_form                payment.payment_transaction_form
