@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+
+        <record id="movie_genero_1" model="movie.genero">
+            <field name="name">Terror</field>
+        </record>
+
+        <record id="movie_genero_2" model="movie.genero">
+            <field name="name">Accion</field>
+        </record>
+
+        <record id="movie_genero_3" model="movie.genero">
+            <field name="name">Comedia</field>
+        </record>
+
+    </data>
+</odoo>

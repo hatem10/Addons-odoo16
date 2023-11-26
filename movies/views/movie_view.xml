@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--tree-->
+        <record id="movie_view_tree" model="ir.ui.view">
+            <field name="name">movie.view.tree</field>
+            <field name="model">movie</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+
+        </record>
+
+        <!--Form-->
+        <record id="movie_view_form" model="ir.ui.view">
+            <field name="name">movie.view.form</field>
+            <field name="model">movie</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <field name="image" widget="image" class="oe_avatar"/>
+                        <div class="oe_row">
+                            <h1>
+                                <field name="name" placeholder="Ingrese Pelicula"/>
+                            </h1>
+                        </div>
+
+                        <group>
+                            <group>
+                                <field name="description" placeholder="Ingrese Descripcion"/>
+                                <field name="author_id"/>
+                                <field  name="sede" placeholder="Ingrese Sede"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Información">
+                                <group>
+                                    <group>
+                                        <field name="genero_id" widget="many2many_tags"/>
+                                        <field name="date" placeholder="Ingrese Fecha"/>
+                                        <field name="clasification"/>
+                                    </group>
+                                    <group>
+                                        <field name="duration"/>
+                                        <field name="country_id"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+
+                     <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+
+        </record>
+
+        <!--Action-->
+        <record id="movie_view_action" model="ir.actions.act_window">
+            <field name="name">Peliculas</field>
+            <field name="res_model">movie</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="target">current</field>
+            <field name="help" type="html">
+                <p>Bienvenido Registre Peliculas</p>
+            </field>
+        </record>
+    </data>
+</odoo>

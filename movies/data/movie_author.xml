@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+
+        <record id="movie_author_1" model="movie.author">
+            <field name="name">Charles Chaplin</field>
+            <field name="last_name">Damian Lenon</field>
+        </record>
+
+        <record id="movie_author_2" model="movie.author">
+            <field name="name">Marlon Brando</field>
+            <field name="last_name">Zalamandra Lopez</field>
+        </record>
+
+        <record id="movie_author_3" model="movie.author">
+            <field name="name">Gary Cooper</field>
+            <field name="last_name">Junda Nelda</field>
+        </record>
+
+    </data>
+</odoo>

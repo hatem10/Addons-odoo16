@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--tree-->
+        <record id="movie_presupuesto_view_tree" model="ir.ui.view">
+            <field name="name">movie.presupuesto.view.tree</field>
+            <field name="model">movie.presupuesto</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="customer_id"/>
+                    <field name="document"/>
+                    <field name="date_pre"/>
+                </tree>
+            </field>
+
+        </record>
+
+        <!--Form-->
+        <record id="movie_presupuesto_view_form" model="ir.ui.view">
+            <field name="name">movie.presupuesto.view.form</field>
+            <field name="model">movie.presupuesto</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                        <button name="btn_draft" string="Borrador" type="object" class="oe_highlight"/>
+                        <button name="btn_approved" string="Aprobado" type="object" class="oe_highlight"/>
+                        <button name="btn_done" string="Realizado" type="object" class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_row">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+
+                        <group>
+                            <group>
+                                <field name="customer_id"/>
+                                <field name="document"/>
+                            </group>
+
+                            <group>
+                                <field name="date_pre"/>
+                                <field  name="currency_id"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Presupuesto">
+                               <field name="detail_pre_ids">
+                                   <tree editable="bottom">
+                                       <field name="movie_id"/>
+                                       <field name="quanty"/>
+                                       <field name="price_unit"/>
+                                       <field name="tax_id"/>
+                                       <field name="currency_id" invisible="1"/>
+                                       <field name="price_subtotal" widget="monetary" options="{'currency_field':'currency_id'}"/>
+                                   </tree>
+                               </field>
+
+                                <group>
+                                    <group>
+                                        <field colspan="2" name="note" nolabel="1" placeholder="Ingrese Nota ..."/>
+                                    </group>
+                                    <group class="oe_subtotal_footer oe_right">
+                                        <field name="amount_base" readonly="1" widget="monetary" options="{'currency_field':'currency_id'}"/>
+                                        <field name="amount_tax" readonly="1" widget="monetary" options="{'currency_field':'currency_id'}"/>
+                                        <field name="amount_total" readonly="1" widget="monetary" options="{'currency_field':'currency_id'}"/>
+                                    </group>
+                                 </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+
+                     <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+
+        </record>
+
+        <!--Action-->
+        <record id="movie_presupuesto_view_action" model="ir.actions.act_window">
+            <field name="name">Presupuestos</field>
+            <field name="res_model">movie.presupuesto</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="target">current</field>
+            <field name="help" type="html">
+                <p>Bienvenido Registre Presupuesto</p>
+            </field>
+        </record>
+    </data>
+</odoo>

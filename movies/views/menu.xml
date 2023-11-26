@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <menuitem id="menu_movie"
+                  name="Pelicula Cine Star"
+                  sequence="1"/>
+
+        <menuitem id="submenu_author"
+                  name="Author"
+                  parent="menu_movie"
+                  action="movie_autor_view_action"
+                  sequence="1"/>
+
+        <menuitem id="submenu_movie"
+                  name="Pelicula"
+                  parent="menu_movie"
+                  sequence="2"/>
+
+        <menuitem id="submenu_movies"
+                  name="Peliculas"
+                  parent="submenu_movie"
+                  action="movie_view_action"
+                  sequence="1"/>
+
+        <menuitem id="submenu_presupuesto"
+                  name="Presupuesto"
+                  parent="submenu_movie"
+                  action="movie_presupuesto_view_action"
+                  sequence="2"/>
+    </data>
+</odoo>

@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+
+        <record id="movie_1" model="movie">
+            <field name="name">REINAS SIN CORONA</field>
+            <field name="description">
+                Un padre tiene que salvar a su hija de 15 años después de que una lluvia de
+                meteoritos impacte contra la Tierra.
+            </field>
+            <field name="duration">2h 30 min</field>
+            <field name="image" type="base64" file="movies/static/src/img/reinas.png"/>
+        </record>
+
+        <record id="movie_2" model="movie">
+            <field name="name">SCREAM 6</field>
+            <field name="description">
+                Esta es la historia de dos primos inseparables que en sus sueños creen que
+                son millonarios, mientras que al amanecer vuelven a su realidad de ser
+                pobres. Para lograr sr millonarios buscarán dinero en diversos trabajos que los llevaran a disparatadas e ingeniosas situaciones cómicas. ¿Lograrán su sueño de ser millonarios y poder disfrutar de los placeres de la vida?
+            </field>
+            <field name="duration">2h 40 min</field>
+            <field name="image" type="base64" file="movies/static/src/img/screma.png"/>
+        </record>
+
+        <record id="movie_3" model="movie">
+            <field name="name">SHAZAM</field>
+            <field name="description">
+                Mientras se entretenían con lo que parecía ser un juego inocente,
+                un grupo de jóvenes invoca a un demonio, que posee a Marcus
+                (Asa Butterfield), quien obliga a los demás
+            </field>
+            <field name="duration">2h 40 min</field>
+            <field name="image" type="base64" file="movies/static/src/img/shazam.png"/>
+        </record>
+
+    </data>
+</odoo>
