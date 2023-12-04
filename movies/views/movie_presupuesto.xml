@@ -10,7 +10,9 @@
                     <field name="name"/>
                     <field name="customer_id"/>
                     <field name="document"/>
+                    <field name="number_document"/>
                     <field name="date_pre"/>
+                    <field name="create_uid"/>
                 </tree>
             </field>
 
@@ -39,6 +41,7 @@
                             <group>
                                 <field name="customer_id"/>
                                 <field name="document"/>
+                                <field name="number_document" attrs="{'invisible':[('document','=',False)]}"/>
                             </group>
 
                             <group>
@@ -83,12 +86,59 @@
 
         </record>
 
+        <!--View Search-->
+        <record id="movie_presupuesto_view_search" model="ir.ui.view">
+            <field name="name">movie.presupuesto.view.tree</field>
+            <field name="model">movie.presupuesto</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="customer_id"/>
+                    <field name="number_document"/>
+                </search>
+            </field>
+        </record>
+
+        <!--View Graph-->
+        <record id="movie_presupuesto_view_graph" model="ir.ui.view">
+            <field name="name">movie.presupuesto.view.graph</field>
+            <field name="model">movie.presupuesto</field>
+            <field name="arch" type="xml">
+                <graph string="Grafico">
+                    <field name="customer_id" type="row"/>
+                </graph>
+            </field>
+        </record>
+
+        <!--View Calendar-->
+        <record id="movie_presupuesto_view_calendar" model="ir.ui.view">
+            <field name="name">movie.presupuesto.view.calendar</field>
+            <field name="model">movie.presupuesto</field>
+            <field name="arch" type="xml">
+                <calendar string="Calendar" date_start="date_pre" mode="month">
+                    <field name="name"/>
+                </calendar>
+            </field>
+        </record>
+
+        <!--View Pivot-->
+        <record id="movie_presupuesto_view_pivot" model="ir.ui.view">
+            <field name="name">movie.presupuesto.view.pivot</field>
+            <field name="model">movie.presupuesto</field>
+            <field name="arch" type="xml">
+                <pivot string="Pivot">
+                    <field name="name" type="row"/>
+                </pivot>
+            </field>
+        </record>
+
         <!--Action-->
         <record id="movie_presupuesto_view_action" model="ir.actions.act_window">
             <field name="name">Presupuestos</field>
             <field name="res_model">movie.presupuesto</field>
-            <field name="view_mode">tree,form,kanban</field>
+            <field name="view_mode">tree,form,kanban,calendar,graph,pivot</field>
             <field name="target">current</field>
+            <field name="limit">20</field>
             <field name="help" type="html">
                 <p>Bienvenido Registre Presupuesto</p>
             </field>

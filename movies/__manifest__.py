@@ -18,6 +18,10 @@
         "data/movie_genero.xml",
         "data/movie_presupuesto.xml",
         #"data/movie.xml",
+        #security
+        "security/res_groups.xml",
+        "security/ir_rule.xml",
+        "security/ir.model.access.csv",
         #views
         "views/movie_view.xml",
         "views/movie_author_view.xml",

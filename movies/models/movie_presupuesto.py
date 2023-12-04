@@ -7,9 +7,10 @@ class MoviePresupuesto(models.Model):
     _description = "Presupuesto de Peliculas"
     _inherit = "mail.thread"
 
-    name = fields.Char(string="Presupuesto",readonly=True,tranking=True)
+    name = fields.Char(string="Presupuesto",tranking=True)
     customer_id = fields.Many2one(string="Cliente",comodel_name="res.partner",required=True,tracking=True)
     document = fields.Selection(string="Documento",selection=TYPE_DOCUMENT,required=True,tracking=True)
+    number_document = fields.Char(string="Numero",required=True,tracking=True)
     currency_id = fields.Many2one(string="Moneda",comodel_name="res.currency",required=True,tracking=True)
     date_pre = fields.Datetime(string="Fecha de Presupuesto",required=True,tracking=True)
     state = fields.Selection(selection=TYPE_STATE,tracking=True)
@@ -37,7 +38,6 @@ class MoviePresupuesto(models.Model):
             rec.amount_base = sum([p_subtotal.price_subtotal for p_subtotal in rec.detail_pre_ids])
             rec.amount_tax =  sum([igv.price_subtotal * (1 - (igv.tax_id.amount)/100) for igv in rec.detail_pre_ids])
             rec.amount_total = rec.amount_base + rec.amount_tax
-            print("*****COMPUTE***")
 
 
     def btn_draft(self):
@@ -49,7 +49,10 @@ class MoviePresupuesto(models.Model):
     def btn_done(self):
         self.write({"state":"done"})
 
-
+    _sql_constraints = [
+        ("unique_name", "unique(name)","!!!....No puede haber Presupuesto con Numero Iguales.....!!!!"),
+        ("unique_number_document","unique(number_document)","!!!....No puede haber Documentos iguales.....!!!!")
+    ]
 class MovieDetailPresupuesto(models.Model):
     _name = "movie.detail.presupuesto"
     _description = "Detalle Presupuesto"

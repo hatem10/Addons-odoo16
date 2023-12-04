@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="rule_movie_presupuesto" model="ir.rule">
+            <field name="name">Informacion Propia</field>
+            <field name="model_id" ref="movies.model_movie_presupuesto"/>
+            <field name="groups" eval="[(4,ref('group_admin')),(4,ref('group_user'))]"/>
+            <field name="domain_force">[('create_uid','in',[user.id])]</field>
+            <field name="perm_create">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_unlink">1</field>
+
+        </record>
+    </data>
+</odoo>

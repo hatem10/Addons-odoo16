@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_admin_movie,access.admin.movie,model_movie,group_admin,1,1,1,1
+access_admin_movie_author,access.admin.movie.author,model_movie_author,group_admin,1,1,1,1
+access_admin_movie_genero,access.admin.movie.genero,model_movie_genero,group_admin,1,1,1,1
+access_admin_movie_presupuesto,access.admin.movie.presupuesto,model_movie_presupuesto,group_admin,1,1,1,1
+access_admin_movie_detail_presupuesto,access.admin.movie.detail_presupuesto,model_movie_detail_presupuesto,group_admin,1,1,1,1
+
+access_user_movie,access.user.movie,model_movie,group_user,1,1,1,1
+access_user_movie_author,access.user.movie.author,model_movie_author,group_user,1,1,1,1
+access_user_movie_genero,access.user.movie.genero,model_movie_genero,group_user,1,1,1,1
+access_user_movie_presupuesto,access.user.movie.presupuesto,model_movie_presupuesto,group_user,1,1,1,1
+access_user_movie_detail_presupuesto,access.user.movie.detail_presupuesto,model_movie_detail_presupuesto,group_user,1,1,1,1
+
+
