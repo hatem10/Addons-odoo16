@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="list_patient" >
+            <t t-call="website.layout">
+                <div class="center">
+                    <table class="table table-bordered">
+                        <theader>
+                            <tr>
+                                <th>Nombres</th>
+                                <th>Apellido Paterno</th>
+                                <th>Apellido Materno</th>
+                                <th>Fecha Nacimiento</th>
+                                <th>Edad</th>
+                                <th>Documento</th>
+                                <th>Numero</th>
+                            </tr>
+                            <tbody>
+                                <t t-foreach="patient" t-as="p">
+                                    <tr>
+                                        <td><t t-esc="p['name']"/></td>
+                                        <td><t t-esc="p['father_last_name']"/></td>
+                                        <td><t t-esc="p['mother_last_name']"/></td>
+                                        <td><t t-esc="p['date']"/></td>
+                                        <td><t t-esc="p['age']"/></td>
+                                        <td><t t-esc="p['type_document']"/></td>
+                                        <td><t t-esc="p['number_document']"/></td>
+
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </theader>
+                    </table>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

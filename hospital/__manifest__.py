@@ -11,6 +11,7 @@
         #views
         "views/hospital_patient_view.xml",
         "views/menu.xml",
+        "static/template/patient.xml",
         #security
         "security/res_groups.xml",
         "security/ir.model.access.csv"

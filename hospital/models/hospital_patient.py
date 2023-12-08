@@ -13,6 +13,7 @@ class HospitalPatient(models.Model):
     full_name = fields.Char(string="Nombres",size=100)
     date_birth = fields.Date(string="Fecha Nacimiento")
     age = fields.Integer(string="Edad",required=True)
+    active = fields.Boolean(string="Activo")
     def default_get(self,fields):
         res = super(HospitalPatient,self).default_get(fields)
         res["type_document"] = DNI

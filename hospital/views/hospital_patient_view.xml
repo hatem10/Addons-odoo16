@@ -45,6 +45,7 @@
                     <field name="age"/>
                     <field name="type_document"/>
                     <field name="number_document"/>
+                    <field name="active"/>
                 </tree>
             </field>
         </record>
