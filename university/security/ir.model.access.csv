@@ -6,3 +6,4 @@ access_admin_university_student,access.admin.university.student,model_university
 access_admin_university_department,access.admin.university.department,model_university_department,group_admin_university,1,1,1,1
 access_admin_university_student_matricula,access.admin.university.student.matricula,model_university_student_matricula,group_admin_university,1,1,1,1
 access_admin_university_year_school,access.admin.university.year.school,model_university_year_school,group_admin_university,1,1,1,1
+access_admin_university_grado,access.admin.university.grado,model_university_grado,group_admin_university,1,1,1,1

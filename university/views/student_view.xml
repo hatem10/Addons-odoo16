@@ -33,7 +33,7 @@
                                 <field name="full_name"/>
                                 <field name="father_last_name"/>
                                 <field name="mother_last_name"/>
-                                <field name="city"/>
+                                <field name="city" options="{'no_quick_create':True,'no_create_edit':True}"/>
                             </group>
 
                             <group>
