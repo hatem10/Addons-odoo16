@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+
+        <!--View Tree-->
+        <record id="university_department_view_tree" model="ir.ui.view">
+            <field name="name">university.department.view.tree</field>
+            <field name="model">university.department</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--View Form-->
+        <record id="university_department_view_form" model="ir.ui.view">
+            <field name="name">university.department.view.form</field>
+            <field name="model">university.department</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--View Search-->
+        <record id="university_department_view_search" model="ir.ui.view">
+            <field name="name">university.department.view.search</field>
+            <field name="model">university.department</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <!--Action-->
+        <record id="university_department_view_action" model="ir.actions.act_window">
+            <field name="name">Departamento</field>
+            <field name="res_model">university.department</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>

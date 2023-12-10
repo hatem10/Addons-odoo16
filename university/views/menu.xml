@@ -1,0 +1,64 @@
+<odoo>
+    <data>
+        <menuitem id="menu_university"
+                  name="Universidad"
+                  sequence="4"/>
+
+        <!--Menu Teacher-->
+        <menuitem id="menu_teacher"
+                  name="Docente"
+                  parent="menu_university"
+                  sequence="1"/>
+
+        <menuitem id="submenu_teacher"
+                  name="Docente"
+                  parent="menu_teacher"
+                  sequence="1"
+                  action="university_teacher_view_action"/>
+
+        <menuitem id="submenu_asignatura"
+                  name="Asignatura"
+                  parent="menu_teacher"
+                  sequence="2"
+                  action="university_asignatura_view_action"/>
+
+        <!--Menu Estudiante-->
+        <menuitem id="menu_student"
+                  name="Estudiante"
+                  parent="menu_university"
+                  sequence="2"/>
+
+        <menuitem id="submenu_student"
+                  name="Estudiante"
+                  parent="menu_student"
+                  sequence="1"
+                  action="university_student_view_action"/>
+
+        <!--Menu Departamento-->
+        <menuitem id="menu_department"
+                  name="Departamento"
+                  parent="menu_university"
+                  action="university_department_view_action"
+                  sequence="3"/>
+
+        <!--Menu Matricula-->
+        <menuitem id="menu_matricula"
+                  name="Matricula"
+                  parent="menu_university"
+                  sequence="4"/>
+
+        <menuitem id="submenu_matricula"
+                  name="Matricula"
+                  parent="menu_matricula"
+                  action="university_student_matricula_view_action"
+                  sequence="1"/>
+
+        <menuitem id="submenu_year_school"
+                  name="Año Escolar"
+                  parent="menu_matricula"
+                  action="university_year_school_view_action"
+                  sequence="2"/>
+
+
+    </data>
+</odoo>

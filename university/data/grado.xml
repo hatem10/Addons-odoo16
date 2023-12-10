@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <record id="grado_fiei" model="university.grado">
+            <field name="name">Grado en Ingeniería Agrícola (Plan 2015)</field>
+        </record>
+
+        <record id="grado_fiis" model="university.grado">
+            <field name="name">Grado en Ingeniería Eléctrica (Plan 2014)</field>
+        </record>
+
+        <record id="grado_fier" model="university.grado">
+            <field name="name">Grado en Ingeniería Electrónica Industrial (Plan 2010)</field>
+        </record>
+
+        <record id="grado_fptm" model="university.grado">
+            <field name="name">Grado en Ingeniería Informática (Plan 2015)</field>
+        </record>
+
+        <record id="grado_fima" model="university.grado">
+            <field name="name">Grado en Ingeniería Mecánica (Plan 2010))</field>
+        </record>
+
+    </data>
+</odoo>

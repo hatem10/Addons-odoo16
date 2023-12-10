@@ -1,0 +1,58 @@
+<odoo>
+    <data>
+
+        <!--View Tree-->
+        <record id="university_asignatura_view_tree" model="ir.ui.view">
+            <field name="name">university.asignatura.view.tree</field>
+            <field name="model">university.asignatura</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="creditos"/>
+                    <field name="curso"/>
+                    <field name="type_asignatura"/>
+                    <field name="id_teacher"/>
+                    <field name="id_grado"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--View Form-->
+        <record id="university_asignatura_view_form" model="ir.ui.view">
+            <field name="name">university.asignatura.view.form</field>
+            <field name="model">university.asignatura</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="creditos"/>
+                                <field name="curso"/>
+                            </group>
+
+                            <group>
+                                <field name="type_asignatura"/>
+                                <field name="id_teacher"/>
+                                <field name="id_grado"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+
+                 <div class="oe_chatter">
+                     <field name="message_follower_ids"/>
+                     <field name="message_ids"/>
+                 </div>
+            </field>
+        </record>
+
+        <!--Action-->
+        <record id="university_asignatura_view_action" model="ir.actions.act_window">
+            <field name="name">Asignaturas</field>
+            <field name="res_model">university.asignatura</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>

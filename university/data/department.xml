@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+        <record id="department_informatica" model="university.department">
+            <field name="name">Informatica</field>
+        </record>
+
+        <record id="department_matematica" model="university.department">
+            <field name="name">Matematicas</field>
+        </record>
+
+        <record id="department_economia_empresa" model="university.department">
+            <field name="name">Economía y Empresa</field>
+        </record>
+
+        <record id="department_educacion" model="university.department">
+            <field name="name">Educación</field>
+        </record>
+
+        <record id="department_agronomia" model="university.department">
+            <field name="name">Agronomia</field>
+        </record>
+
+        <record id="department_quimica_fisica" model="university.department">
+            <field name="name">Química y Física</field>
+        </record>
+
+        <record id="department_filologia" model="university.department">
+            <field name="name">Filología</field>
+        </record>
+
+        <record id="department_derecho" model="university.department">
+            <field name="name">Derecho</field>
+        </record>
+
+        <record id="department_biologia_geologia" model="university.department">
+            <field name="name">Biología y Geología</field>
+        </record>
+
+
+    </data>
+</odoo>

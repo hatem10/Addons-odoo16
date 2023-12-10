@@ -1,0 +1,80 @@
+<odoo>
+    <data>
+
+        <!--View Tree-->
+        <record id="university_student_matricula_view_tree" model="ir.ui.view">
+            <field name="name">university.student.matricula.view.tree</field>
+            <field name="model">university.student.matricula</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="id_asignatura"/>
+                    <field name="id_student"/>
+                    <field name="id_year_school"/>
+                    <field name="state_matricula" widget="badge"
+                           decoration-danger="state_matricula == 'draft'"
+                           decoration-info="state_matricula == 'approved'"
+                           decoration-warning="state_matricula == 'done'"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--View Form-->
+        <record id="university_student_matricula_view_form" model="ir.ui.view">
+            <field name="name">university.student.matricula.view.form</field>
+            <field name="model">university.student.matricula</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="state_matricula" widget="statusbar"/>
+                        <button name="btn_draft" string="Borrador" type="object" class="oe_highlight"
+                                attrs="{'invisible':[('state_matricula','in',['draft','done'])]}"/>
+                        <button name="btn_approved" string="Aprobado" type="object" class="oe_highlight" attrs="{'invisible':[('state_matricula','in',['done'])]}"/>
+                        <button name="btn_done" string="Realizado" type="object" class="oe_highlight" attrs="{'invisible':[('state_matricula','=','draft')]}"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="id_asignatura"/>
+                            </group>
+
+                            <group>
+                                <field name="id_student"/>
+                                <field name="id_year_school"/>
+                                <field name="date_matricula"/>
+                            </group>
+                        </group>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <!--View Search-->
+        <record id="university_student_matricula_view_search" model="ir.ui.view">
+            <field name="name">university.student.matricula.view.search</field>
+            <field name="model">university.student.matricula</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="id_asignatura"/>
+                    <field name="id_student"/>
+                </search>
+            </field>
+        </record>
+
+        <!--Action-->
+        <record id="university_student_matricula_view_action" model="ir.actions.act_window">
+            <field name="name">Matricula</field>
+            <field name="res_model">university.student.matricula</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>
