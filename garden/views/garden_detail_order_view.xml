@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <!--view tree-->
+        <record id="garden_detail_order_view_tree" model="ir.ui.view">
+            <field name="name">garden.detail.order.view.tree</field>
+            <field name="model">garden.detail.order</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id_order"/>
+                    <field name="id_product" widget="many2many_tags"/>
+                    <field name="quanty"/>
+                    <field name="price_unit"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--view form-->
+        <record id="garden_detail_order_view_form" model="ir.ui.view">
+            <field name="name">garden.detail.order.view.form</field>
+            <field name="model">garden.detail.order</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="id_order"/>
+                                <field name="id_product" widget="many2many_tags"/>
+                                <field name="quanty"/>
+                                <field name="price_unit"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--view action-->
+        <record id="garden_detail_order_view_action" model="ir.actions.act_window">
+            <field name="name">Detalle Pedido</field>
+            <field name="res_model">garden.detail.order</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>

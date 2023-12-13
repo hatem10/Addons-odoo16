@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record id="gama_product_herbaceas" model="garden.gama.product">
+            <field name="name">Herbaceas</field>
+            <field name="description_text">Herbaceas</field>
+            <field name="description_html">Plantas para jardin decorativas</field>
+            <field name="image" type="base64" file="garden/static/img/Herbaceas.png"/>
+        </record>
+
+        <record id="gama_product_aromaticas" model="garden.gama.product">
+            <field name="name">Aromáticas</field>
+            <field name="description_text">Aromáticas</field>
+            <field name="description_html">Plantas aromáticas</field>
+            <field name="image" type="base64" file="garden/static/img/Plantas aromáticas.png"/>
+        </record>
+
+        <record id="gama_product_frutales" model="garden.gama.product">
+            <field name="name">Frutales</field>
+            <field name="description_text">Frutales</field>
+            <field name="description_html">Árboles pequeños de producción frutal</field>
+            <field name="image" type="base64" file="garden/static/img/Árboles pequeños de producción frutal.png"/>
+        </record>
+
+        <record id="gama_product_ornamentales" model="garden.gama.product">
+            <field name="name">Ornamentales</field>
+            <field name="description_text">Ornamentales</field>
+            <field name="description_html">Plantas vistosas para la decoración del jardín</field>
+            <field name="image" type="base64" file="garden/static/img/ornamentales.png"/>
+        </record>
+    </data>
+</odoo>

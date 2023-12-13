@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+        <!--view tree-->
+        <record id="garden_office_view_tree" model="ir.ui.view">
+            <field name="name">garden.office.view.tree</field>
+            <field name="model">garden.office</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="id_city"/>
+                    <field name="id_country"/>
+                    <field name="code_postal"/>
+                    <field name="phone"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--view form-->
+        <record id="garden_office_view_form" model="ir.ui.view">
+            <field name="name">garden.office.view.form</field>
+            <field name="model">garden.office</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="id_city"/>
+                                <field name="id_country"/>
+                                <field name="code_postal"/>
+                            </group>
+
+                            <group>
+                                <field name="phone"/>
+                                <field name="address_1"/>
+                                <field name="address_2"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--view action-->
+        <record id="garden_office_view_action" model="ir.actions.act_window">
+            <field name="name">Oficina</field>
+            <field name="res_model">garden.office</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>

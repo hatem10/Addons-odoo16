@@ -1,0 +1,58 @@
+<odoo>
+    <data>
+        <!--view tree-->
+        <record id="garden_product_view_tree" model="ir.ui.view">
+            <field name="name">garden.product.view.tree</field>
+            <field name="model">garden.product</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="name_product"/>
+                    <field name="gama_product_id"/>
+                    <field name="dimensiones"/>
+                    <field name="proveedor"/>
+                    <field name="description"/>
+                    <field name="quanty_stock"/>
+                    <field name="price_sale"/>
+                    <field name="price_proveedor"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--view form-->
+        <record id="garden_product_view_form" model="ir.ui.view">
+            <field name="name">garden.product.view.form</field>
+            <field name="model">garden.product</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="name_product"/>
+                                <field name="gama_product_id"/>
+                                <field name="dimensiones"/>
+                            </group>
+
+                            <group>
+                                <field name="proveedor"/>
+                                <field name="description"/>
+                                <field name="quanty_stock"/>
+                                <field name="price_sale"/>
+                                <field name="price_proveedor"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--view action-->
+        <record id="garden_product_view_action" model="ir.actions.act_window">
+            <field name="name">Producto</field>
+            <field name="res_model">garden.product</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>

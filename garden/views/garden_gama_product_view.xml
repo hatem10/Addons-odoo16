@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <!--view tree-->
+        <record id="garden_gama_product_view_tree" model="ir.ui.view">
+            <field name="name">garden.gama.product.view.tree</field>
+            <field name="model">garden.gama.product</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="image" widget="image" options="{'size':[40,40]}"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--view form-->
+        <record id="garden_gama_product_view_form" model="ir.ui.view">
+            <field name="name">garden.gama.product.view.form</field>
+            <field name="model">garden.gama.product</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_avatar">
+                            <field name="image" widget="image"/>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="description_text"/>
+                                <field name="description_html" widget="html"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--view action-->
+        <record id="garden_gama_product_view_action" model="ir.actions.act_window">
+            <field name="name">Gama Producto</field>
+            <field name="res_model">garden.gama.product</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,81 @@
+<odoo>
+    <data>
+        <menuitem id="menu_garden"
+                  name="jardin"
+                  sequence="2"/>
+
+        <!--Menu Product-->
+        <menuitem id="submenu_product"
+                  name="Producto"
+                  parent="menu_garden"
+                  sequence="1"/>
+
+        <menuitem id="submenu_garden_product"
+                  name="Producto"
+                  action="garden_product_view_action"
+                  parent="submenu_product"
+                  sequence="1"/>
+
+        <menuitem id="submenu_garden_gama_product"
+                  name="Gama Producto"
+                  parent="submenu_product"
+                  action="garden_gama_product_view_action"
+                  sequence="2"/>
+
+        <!--Order-->
+        <menuitem id="submenu_order"
+                  name="Detalle Pedido"
+                  parent="menu_garden"
+                  sequence="2"/>
+
+        <menuitem id="submenu_garden_order"
+                  name="Pedido"
+                  parent="submenu_order"
+                  action="garden_order_view_action"
+                  sequence="1"/>
+
+        <menuitem id="submenu_garden_detail_order"
+                  name="Detalle Pedido"
+                  parent="submenu_order"
+                  action="garden_detail_order_view_action"
+                  sequence="2"/>
+
+        <!--Payment-->
+        <menuitem id="submenu_payment"
+                  name="Pagos"
+                  parent="menu_garden"
+                  sequence="3"/>
+
+        <menuitem id="submenu_garden_payment"
+                  name="Pagos"
+                  parent="submenu_payment"
+                  action="garden_payment_view_action"
+                  sequence="1"/>
+
+        <menuitem id="submenu_garden_customer"
+                  name="Cliente"
+                  parent="submenu_payment"
+                  action="garden_customer_view_action"
+                  sequence="2"/>
+
+        <!--Employee-->
+        <menuitem id="submenu_office"
+                  name="Oficina"
+                  parent="menu_garden"
+                  sequence="4"/>
+
+        <menuitem id="submenu_garden_office"
+                  name="Oficina"
+                  parent="submenu_office"
+                  action="garden_office_view_action"
+                  sequence="1"/>
+
+        <menuitem id="submenu_garden_hr_employee"
+                  name="Empleados"
+                  parent="submenu_office"
+                  action="hr.open_view_employee_list_my"
+                  sequence="2"/>
+
+
+    </data>
+</odoo>

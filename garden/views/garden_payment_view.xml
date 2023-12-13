@@ -1,0 +1,50 @@
+<odoo>
+    <data>
+        <!--view tree-->
+        <record id="garden_payment_view_tree" model="ir.ui.view">
+            <field name="name">garden.payment.view.tree</field>
+            <field name="model">garden.payment</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="formant_payment"/>
+                    <field name="date_payment"/>
+                    <field name="id_customer"/>
+                    <field name="total"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--view form-->
+        <record id="garden_payment_view_form" model="ir.ui.view">
+            <field name="name">garden.payment.view.form</field>
+            <field name="model">garden.payment</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="formant_payment"/>
+                            </group>
+
+                            <group>
+                                <field name="date_payment"/>
+                                <field name="total"/>
+                                <field name="id_customer"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--view action-->
+        <record id="garden_payment_view_action" model="ir.actions.act_window">
+            <field name="name">Pagos</field>
+            <field name="res_model">garden.payment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>
