@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <!--Category-->
+        <record id="category_garden" model="ir.module.category">
+            <field name="name">Jardineria</field>
+            <field name="sequence">12</field>
+        </record>
+
+        <!--Groups-->
+        <record id="garden_groups_admin" model="res.groups">
+            <field name="name">Administrador</field>
+            <field name="category_id" ref="garden.category_garden"/>
+        </record>
+    </data>
+</odoo>

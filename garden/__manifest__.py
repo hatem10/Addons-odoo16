@@ -22,6 +22,9 @@
         "views/garden_payment_view.xml",
         "views/garden_customer_view.xml",
         "views/garden_office_view.xml",
-        "views/menu.xml"
+        "views/menu.xml",
+        #security
+        "security/res_groups.xml",
+        "security/ir.model.access.csv"
     ]
 }

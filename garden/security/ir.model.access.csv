@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_admin_garden_product,access.admin.garden.product,model_garden_product,garden_groups_admin,1,1,1,1
+access_admin_garden_gama_product,access.admin.garden.gama.product,model_garden_gama_product,garden_groups_admin,1,1,1,1
+access_admin_garden_order,access.admin.garden.order,model_garden_order,garden_groups_admin,1,1,1,1
+access_admin_detail_order,access.admin.garden.detail.order,model_garden_detail_order,garden_groups_admin,1,1,1,1
+access_admin_garden_payment,access.admin.garden.payment,model_garden_payment,garden_groups_admin,1,1,1,1
+access_admin_garden_customer,access.admin.garden.customer,model_garden_customer,garden_groups_admin,1,1,1,1
+access_admin_garden_office,access.admin.garden.office,model_garden_office,garden_groups_admin,1,1,1,1
