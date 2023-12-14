@@ -8,5 +8,5 @@ class GamaProducto(models.Model):
     name = fields.Char(string="Gama",size=100,tracking=True)
     description_text = fields.Text(string="Descripción Corta",size=100,tracking=True)
     description_html = fields.Html(string="Descripcion Larga",size=100,tracking=True)
-    image = fields.Binary(string="Imagen")
+    image = fields.Binary(string="Imagen",tracking=True)
 

@@ -43,7 +43,27 @@
                             </group>
                         </group>
                     </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <!-- <field name="activity_ids"/> -->
+                        <field name="message_ids"/>
+                    </div>
                 </form>
+            </field>
+        </record>
+
+        <!--view search-->
+        <record id="garden_product_view_search" model="ir.ui.view">
+            <field name="name">garden.product.view.search</field>
+            <field name="model">garden.product</field>
+            <field name="arch" type="xml">
+                <search>
+                        <field name="name"/>
+                        <field name="name_product"/>
+                        <field name="gama_product_id"/>
+                        <field name="proveedor"/>
+                </search>
             </field>
         </record>
 

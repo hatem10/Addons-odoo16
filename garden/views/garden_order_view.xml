@@ -22,6 +22,12 @@
             <field name="model">garden.order</field>
             <field name="arch" type="xml">
                 <form>
+                    <header>
+                        <button name="btn_pendient" string="Pendiente" type="object" class="oe_highlight"/>
+                        <button name="btn_deliveried" string="Entregado" type="object" class="oe_highlight"/>
+                        <button name="btn_rejected" string="Rechazado" type="object" class="oe_highlight"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -37,7 +43,34 @@
                             </group>
                         </group>
                     </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <!-- <field name="activity_ids"/> -->
+                        <field name="message_ids"/>
+                    </div>
                 </form>
+            </field>
+        </record>
+
+        <!--view search-->
+        <record id="garden_order_view_search" model="ir.ui.view">
+            <field name="name">garden.order.view.search</field>
+            <field name="model">garden.order</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="date_order"/>
+                    <field name="date_expected"/>
+                    <field name="date_delivery"/>
+                    <field name="id_customer"/>
+                    <field name="state"/>
+
+                    <!--filter-->
+                    <filter name="filter_state_pendient" string="Pendiente" domain="[('state','in',['pendient'])]"/>
+                    <filter name="filter_state_deliveried" string="Entregado" domain="[('state','in',['deliveried'])]"/>
+                    <filter name="filter_state_rejected" string="Rechazado" domain="[('state','in',['rejected'])]"/>
+                </search>
             </field>
         </record>
 

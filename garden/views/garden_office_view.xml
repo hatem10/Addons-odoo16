@@ -37,7 +37,28 @@
                             </group>
                         </group>
                     </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <!-- <field name="activity_ids"/> -->
+                        <field name="message_ids"/>
+                    </div>
                 </form>
+            </field>
+        </record>
+
+        <!--view search-->
+        <record id="garden_office_view_search" model="ir.ui.view">
+            <field name="name">garden.office.view.search</field>
+            <field name="model">garden.office</field>
+            <field name="arch" type="xml">
+                <search>
+                        <field name="name"/>
+                        <field name="id_city"/>
+                        <field name="id_country"/>
+                        <field name="code_postal"/>
+                        <field name="phone"/>
+                </search>
             </field>
         </record>
 
