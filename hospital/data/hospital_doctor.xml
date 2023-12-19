@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record id="hospital_doctor_1" model="hospital.doctor">
+            <field name="name">Huapaya</field>
+            <field name="last_name">Mendoza Araujo</field>
+            <field name="address">Jiron Mongolia 1423</field>
+            <field name="type_doc">01</field>
+            <!--<field name="date_birth">1995/07/03</field>-->
+            <field name="document">74896325</field>
+            <field name="codigo">DOC671</field>
+            <field name="active">1</field>
+        </record>
+
+        <record id="hospital_doctor_2" model="hospital.doctor">
+            <field name="name">Melgarejo</field>
+            <field name="last_name">Mundieta Jose</field>
+            <field name="address">Jiron Urpanilda 1575</field>
+            <field name="type_doc">01</field>
+            <!--<field name="date_birth">1995/07/03</field>-->
+            <field name="document">74953852</field>
+            <field name="codigo">DOC672</field>
+            <field name="active">1</field>
+        </record>
+
+        <record id="hospital_doctor_3" model="hospital.doctor">
+            <field name="name">Pablo</field>
+            <field name="last_name">Lisboa Mundria</field>
+            <field name="address">Jiron Diamantes 1975</field>
+            <field name="type_doc">01</field>
+            <!--<field name="date_birth">1995/07/03</field>-->
+            <field name="document">74852111</field>
+            <field name="codigo">DOC673</field>
+            <field name="active">1</field>
+        </record>
+
+    </data>
+</odoo>

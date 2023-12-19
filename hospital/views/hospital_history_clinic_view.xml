@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+        <!--view tree-->
+        <record id="hospital_history_clinic_view_tree" model="ir.ui.view">
+            <field name="name">hospital.history.clinicview.tree</field>
+            <field name="model">hospital.history.clinic</field>
+            <field name="arch" type="xml">
+                <tree string="Historia Clinica">
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+         <!--view form-->
+        <record id="hospital_history_clinic_view_form" model="ir.ui.view">
+            <field name="name">hospital.history.clinic.view.form</field>
+            <field name="model">hospital.history.clinic</field>
+            <field name="arch" type="xml">
+                <form string="Historia Clinica">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="date"/>
+                            </group>
+
+                            <group>
+                                <field name="patient_id"/>
+                            </group>
+
+                            <!--<group>
+                                <field name="date_birth"/>
+                                <field name="age"/>
+                                <field name="type_document"/>
+                                <field name="number_document"/>
+                            </group>-->
+                        </group>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                         <field name="message_follower_ids"/>
+                         <field name="message_ids"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+        <!--view action-->
+        <record id="hospital_history_clinic_view_action" model="ir.actions.act_window">
+            <field name="name">Historia Clinica</field>
+            <field name="res_model">hospital.history.clinic</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>

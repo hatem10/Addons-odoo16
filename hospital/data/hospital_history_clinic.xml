@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="sequence_hospital_history_clinic" model="ir.sequence">
+            <field name="name">Secuencia Historia Clinica</field>
+            <field name="implementation">no_gap</field>
+            <field name="code">code.historty.clinic</field>
+            <field name="prefix">HC-</field>
+            <field name="suffix">-%(year)s</field>
+            <field name="padding">6</field>
+            <field name="number_increment">1</field>
+            <field name="number_next_actual">1</field>
+        </record>
+    </data>
+</odoo>

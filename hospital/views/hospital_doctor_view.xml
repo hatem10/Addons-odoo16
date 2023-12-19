@@ -1,0 +1,66 @@
+<odoo>
+    <data>
+        <!--view tree-->
+        <record id="hospital_doctor_view_tree" model="ir.ui.view">
+            <field name="name">hospital.doctor.view.tree</field>
+            <field name="model">hospital.doctor</field>
+            <field name="arch" type="xml">
+                <tree string="Doctor">
+                    <field name="codigo"/>
+                    <field name="name"/>
+                    <field name="last_name"/>
+                    <field name="address"/>
+                    <field name="type_doc"/>
+                    <field name="document"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+         <!--view form-->
+        <record id="hospital_doctor_view_form" model="ir.ui.view">
+            <field name="name">hospital.doctor.view.form</field>
+            <field name="model">hospital.doctor</field>
+            <field name="arch" type="xml">
+                <form string="Historia Clinica">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="codigo"/>
+                                <field name="name"/>
+                                <field name="last_name"/>
+                                <field name="address"/>
+                            </group>
+
+                            <group>
+                                <field name="type_doc"/>
+                                <field name="document"/>
+                            </group>
+
+                            <!--<group>
+                                <field name="date_birth"/>
+                                <field name="age"/>
+                                <field name="type_document"/>
+                                <field name="number_document"/>
+                            </group>-->
+                        </group>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                         <field name="message_follower_ids"/>
+                         <field name="message_ids"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+        <!--view action-->
+        <record id="hospital_doctor_view_action" model="ir.actions.act_window">
+            <field name="name">Doctores</field>
+            <field name="res_model">hospital.doctor</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>

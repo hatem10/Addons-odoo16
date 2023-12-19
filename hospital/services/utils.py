@@ -1,9 +1,21 @@
-DNI = "01"
-CARNET = "03"
-PASAPORTE = "06"
 
 TYPE_DOCUMENT = [
-    (DNI,"DNI"),
-    (CARNET,"CARNET DE EXTRANJERIA"),
-    (PASAPORTE,"PASAPORTE")
+    ("01","DNI"),
+    ("03","CARNET DE EXTRANJERIA"),
+    ("06","PASAPORTE")
+]
+
+TYPE_SEXO = [
+    ("H","Masculino"),
+    ("F","Femenino")
+]
+
+TYPE_EXAMEN = [
+    ("LAB","LAB"),
+    ("ATE","ATENCIÓN")
+]
+
+TYPE_SEGURO = [
+    ("c_externa","Consulta Externa"),
+    ("c_interna","Consulta Interna")
 ]

@@ -1,0 +1,111 @@
+<odoo>
+    <data>
+
+        <!--view form-->
+        <record id="hospital_examen_auxiliar_view_form" model="ir.ui.view">
+            <field name="name">hospital.examen.auxiliar.view.form</field>
+            <field name="model">hospital.examen.auxiliar</field>
+            <field name="arch" type="xml">
+                <form string="Formulario de Pacientes">
+                    <sheet>
+                        <!--<div class="oe_title">
+                            <div class="o_row">
+                                <field name="name" readonly="1"/>
+                            </div>
+                        </div>-->
+                        <group>
+                            <group width="25%">
+                                <field name="name"/>
+                            </group>
+
+                            <group width="25%">
+                                <field name="type_examen"/>
+                            </group>
+
+                            <group width="25%">
+                                <field name="date"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group>
+                                <field name="patient_id"/>
+                                <field name="document"/>
+                                <field name="type_seguro"/>
+                            </group>
+
+                            <group>
+                                <field name="history_clinic_id"/>
+                                <field name="sexo"/>
+                                <field name="age"/>
+                            </group>
+                        </group>
+
+                        <separator string="DOMICILIO Y DATOS DE CONTACTO DEL PACIENTE"/>
+                        <group>
+                            <group>
+                                <field name="department"/>
+                                <field name="province"/>
+                                <field name="district"/>
+                                <field name="address"/>
+                            </group>
+
+                            <group>
+                                <field name="reference"/>
+                                <field name="mobile"/>
+                                <field name="phone"/>
+                                <field name="email"/>
+                            </group>
+                        </group>
+
+                        <separator string="Area Examen Auxiliar"/>
+                        <field name="type_examen_ids">
+                            <tree editable="bottom">
+                                <field name="code"/>
+                                <field name="name"/>
+                                <field name="indication"/>
+                            </tree>
+                        </field>
+                        <group>
+                            <group>
+                                <field name="observation" widget="html"/>
+                            </group>
+                        </group>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                     <field name="message_follower_ids"/>
+                     <field name="message_ids"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+        <!--view tree-->
+        <record id="hospital_examen_auxiliar_view_tree" model="ir.ui.view">
+            <field name="name">hospital.examen.auxiliar.view.tree</field>
+            <field name="model">hospital.examen.auxiliar</field>
+            <field name="arch" type="xml">
+                <tree string="Lista de Pacientes">
+                    <field name="name"/>
+                    <field name="type_examen"/>
+                    <field name="date"/>
+                    <field name="patient_id"/>
+                    <field name="document"/>
+                    <field name="age"/>
+                    <field name="sexo"/>
+                    <field name="history_clinic_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--view action-->
+        <record id="hospital_examen_auxiliar_view_action" model="ir.actions.act_window">
+            <field name="name">Examen Auxiliar</field>
+            <field name="res_model">hospital.examen.auxiliar</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>

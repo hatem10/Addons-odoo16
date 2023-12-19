@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+        <record id="hospital_type_examen_1" model="hospital.type.examen">
+            <field name="name">DOSAJE DE ALBUMINA,PLASMA O SANGRE TOTAL</field>
+            <field name="code">82040</field>
+        </record>
+
+        <record id="hospital_type_examen_2" model="hospital.type.examen">
+            <field name="name">DOSAJE DE CALCIO</field>
+            <field name="code">82310</field>
+        </record>
+
+        <record id="hospital_type_examen_3" model="hospital.type.examen">
+            <field name="name">CALCIO,ORINA,CUANTITATIVA,MUESTRA CON TIEMPO MEDIDO</field>
+            <field name="code">82340</field>
+        </record>
+
+        <record id="hospital_type_examen_4" model="hospital.type.examen">
+            <field name="name">DOSAJE DE CREATININA EN SANGRE</field>
+            <field name="code">82565</field>
+        </record>
+
+        <record id="hospital_type_examen_5" model="hospital.type.examen">
+            <field name="name">DOSAJE DE FOSFATASA,ALCALINA</field>
+            <field name="code">84075</field>
+        </record>
+
+        <record id="hospital_type_examen_6" model="hospital.type.examen">
+            <field name="name">DOSAJE DE FOSFORO INORGANICO(FOSFATO)</field>
+            <field name="code">84100</field>
+        </record>
+
+        <record id="hospital_type_examen_7" model="hospital.type.examen">
+            <field name="name">PROTEINAS TOTALES,EXCEPTO REFRACTOMETRIA,SUERO,PLASMA,O SANGRE TOTAL</field>
+            <field name="code">84155</field>
+        </record>
+
+        <record id="hospital_type_examen_8" model="hospital.type.examen">
+            <field name="name">PROTEINAS,TOTALES Y FRACCIONADAS EN SANGRE POR COLORIMETRIA</field>
+            <field name="code">84167</field>
+        </record>
+
+        <record id="hospital_type_examen_9" model="hospital.type.examen">
+            <field name="name">TIROXINA,LIBRE</field>
+            <field name="code">84439</field>
+        </record>
+
+        <record id="hospital_type_examen_10" model="hospital.type.examen">
+            <field name="name">ASPARTATO AMINO TRANSFERASA(AST)(SG0T)</field>
+            <field name="code">84450</field>
+        </record>
+
+        <record id="hospital_type_examen_11" model="hospital.type.examen">
+            <field name="name">TRANSFERASA,AMINO ALANTINA(ALT)(SGPT)</field>
+            <field name="code">84460</field>
+        </record>
+
+        <record id="hospital_type_examen_12" model="hospital.type.examen">
+            <field name="name">HORMONA ESTIMULANTE DE LA TIROIDES(TSH)</field>
+            <field name="code">84443</field>
+        </record>
+    </data>
+</odoo>

@@ -51,11 +51,11 @@ class Patient(http.Controller):
             }
         return request.render("hospital.list_patient",context)
 
-    @http.route("/update-patient/<id_patient>",methods=["GET"],type="http",auth="user",website=True)
+    @http.route("/update-patient/<patient_id>",methods=["GET"],type="http",auth="user",website=True)
     def Update_Patient(self,**kwargs):
-        id_hospital_patient = kwargs.get("id_patient",False)
-        print("****Id**",id_hospital_patient)
-        obj_hospital_patient = request.env["hospital.patient"].search([("id","=",id_hospital_patient)])
+        hospital_patient_id = kwargs.get("patient_id",False)
+        print("****Id**",hospital_patient_id)
+        obj_hospital_patient = request.env["hospital.patient"].search([("id","=",hospital_patient_id)])
         if obj_hospital_patient:
             data = {
                 "date_birth":date(2000,2,27),
@@ -72,10 +72,10 @@ class Patient(http.Controller):
 
         return json.dumps(context)
 
-    @http.route("/delete-patient/<id_patient>",methods=["GET"],type="http",auth="user",website=True)
+    @http.route("/delete-patient/<patient_id>",methods=["GET"],type="http",auth="user",website=True)
     def Delete_Patient(self,**kwargs):
-        id_hospital_patient = kwargs.get("id_patient",False)
-        obj_hospital_patient = request.env["hospital.patient"].search([("id","=",id_hospital_patient)])
+        hospital_patient_id = kwargs.get("patient_id",False)
+        obj_hospital_patient = request.env["hospital.patient"].search([("id","=",hospital_patient_id)])
         if obj_hospital_patient:
             obj_hospital_patient.unlink()
             context ={

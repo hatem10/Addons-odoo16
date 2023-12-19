@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+        <record id="hospital_patient_1" model="hospital.patient">
+            <field name="name">Andres Wiesse Condori Acevedo</field>
+            <field name="full_name">Andres Wiesse</field>
+            <field name="father_last_name">Condori</field>
+            <field name="mother_last_name">Acevedo</field>
+            <!--<field name="date_birth">1995/07/03</field>-->
+            <field name="age">20</field>
+            <field name="type_document">01</field>
+            <field name="number_document">74987365</field>
+            <field name="active">1</field>
+        </record>
+
+        <record id="hospital_patient_2" model="hospital.patient">
+            <field name="name">Julio Iglesias Alzaba Agrada</field>
+            <field name="full_name">Julio Iglesias</field>
+            <field name="father_last_name">Alzaba</field>
+            <field name="mother_last_name">Agrada</field>
+            <!--<field name="date_birth">1990/07/13</field>-->
+            <field name="age">34</field>
+            <field name="type_document">01</field>
+            <field name="number_document">72478951</field>
+            <field name="active">1</field>
+        </record>
+
+        <record id="hospital_patient_3" model="hospital.patient">
+            <field name="name">Mendoza Julia Andromeda Lenon</field>
+            <field name="full_name">Mendoza Julia</field>
+            <field name="father_last_name">Andromeda</field>
+            <field name="mother_last_name">Lenon</field>
+            <!--<field name="date_birth">1994/04/24</field>-->
+            <field name="age">44</field>
+            <field name="type_document">01</field>
+            <field name="number_document">71354963</field>
+            <field name="active">1</field>
+        </record>
+
+        <record id="hospital_patient_4" model="hospital.patient">
+            <field name="name">Melon Julia Gaspar Souza</field>
+            <field name="full_name">Melon Julia</field>
+            <field name="father_last_name">Gaspar</field>
+            <field name="mother_last_name">Souza</field>
+            <!--<field name="date_birth">1997/04/24</field>-->
+            <field name="age">52</field>
+            <field name="type_document">01</field>
+            <field name="number_document">71987456</field>
+            <field name="active">1</field>
+        </record>
+    </data>
+</odoo>

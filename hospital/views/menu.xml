@@ -5,12 +5,53 @@
                   name="Hospital"
                   sequence="3"/>
 
-        <!--submenu-->
-        <menuitem id="submenu_hospital_patient"
+        <!--Pacientes-->
+        <menuitem id="submenu_patient"
                   name="Pacientes"
                   parent="menu_hospital"
+                  sequence="1"/>
+
+        <menuitem id="submenu_hospital_patient"
+                  name="Pacientes"
+                  parent="submenu_patient"
                   action="hospital_patient_view_action"
                   sequence="1"/>
+
+        <menuitem id="submenu_hospital_history_clinic"
+                  name="Historia Clinica"
+                  parent="submenu_patient"
+                  action="hospital_history_clinic_view_action"
+                  sequence="2"/>
+
+        <!--Doctor-->
+        <menuitem id="submenu_doctor"
+                  name="Doctor"
+                  parent="menu_hospital"
+                  sequence="2"/>
+
+        <menuitem id="submenu_hospital_doctor"
+                  name="Doctor"
+                  parent="submenu_doctor"
+                  action="hospital_doctor_view_action"
+                  sequence="1"/>
+
+        <!--Solicitud-->
+        <menuitem id="submenu_solicitud"
+                  name="Solicitud"
+                  parent="menu_hospital"
+                  sequence="3"/>
+
+        <menuitem id="submenu_hospital_type_examen"
+                  name="Tipo Examen"
+                  parent="submenu_solicitud"
+                  action="hospital_type_examen_view_action"
+                  sequence="1"/>
+
+        <menuitem id="submenu_hospital_examen_auxiliar"
+                  name="Examen Auxiliar"
+                  parent="submenu_solicitud"
+                  action="hospital_examen_auxiliar_view_action"
+                  sequence="2"/>
 
     </data>
 </odoo>

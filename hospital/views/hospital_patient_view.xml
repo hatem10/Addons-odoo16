@@ -18,6 +18,7 @@
                                 <field name="full_name"/>
                                 <field name="father_last_name"/>
                                 <field name="mother_last_name"/>
+                                <field name="sexo"/>
                             </group>
                             <group style="width:50%">
                                 <field name="date_birth"/>
@@ -27,6 +28,12 @@
                             </group>
                         </group>
                     </sheet>
+
+                    <div class="oe_chatter">
+                     <field name="message_follower_ids"/>
+                     <field name="message_ids"/>
+                    </div>
+
                 </form>
             </field>
         </record>
@@ -41,6 +48,7 @@
                     <field name="full_name"/>
                     <field name="father_last_name"/>
                     <field name="mother_last_name"/>
+                    <field name="sexo"/>
                     <field name="date_birth"/>
                     <field name="age"/>
                     <field name="type_document"/>
