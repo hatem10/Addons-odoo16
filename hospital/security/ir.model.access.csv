@@ -1,3 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
 access_admin_hospital_patient,access.admin.hospital.patient,hospital.model_hospital_patient,group_admin_hospital,1,1,1,1
+access_admin_hospital_history_clinic,access.admin.hospital.history.clinic,model_hospital_history_clinic,group_admin_hospital,1,1,1,1
+access_admin_hospital_doctor,access.admin.hospital.doctor,model_hospital_doctor,group_admin_hospital,1,1,1,1
+access_admin_hospital_type_examen,access.admin.hospital.type.examen,model_hospital_type_examen,group_admin_hospital,1,1,1,1
+access_admin_hospital_examen_auxiliar,access.admin.hospital.examen.auxiliar,model_hospital_examen_auxiliar,group_admin_hospital,1,1,1,1
+
 access_user_hospital_patient,access.user.hospital.patient,hospital.model_hospital_patient,group_user_hospital,1,0,1,0

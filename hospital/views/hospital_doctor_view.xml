@@ -55,6 +55,22 @@
             </field>
         </record>
 
+        <!--view search-->
+        <record id="hospital_doctor_view_search" model="ir.ui.view">
+            <field name="name">hospital.doctor.view.search</field>
+            <field name="model">hospital.doctor</field>
+            <field name="arch" type="xml">
+                <search string="Busqueda Doctor">
+                    <!--Busqueda-->
+                    <field name="codigo"/>
+                    <field name="name"/>
+                    <field name="last_name"/>
+                    <field name="address"/>
+                    <field name="document"/>
+                </search>
+            </field>
+        </record>
+
         <!--view action-->
         <record id="hospital_doctor_view_action" model="ir.actions.act_window">
             <field name="name">Doctores</field>

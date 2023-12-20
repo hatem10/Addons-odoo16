@@ -48,6 +48,18 @@
             </field>
         </record>
 
+        <!--view search-->
+        <record id="hospital_history_clinic_view_search" model="ir.ui.view">
+            <field name="name">hospital.history.clinic.view.search</field>
+            <field name="model">hospital.history.clinic</field>
+            <field name="arch" type="xml">
+                <search string="Busqueda Historia Clinica">
+                    <!--Busqueda-->
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
         <!--view action-->
         <record id="hospital_history_clinic_view_action" model="ir.actions.act_window">
             <field name="name">Historia Clinica</field>

@@ -58,6 +58,28 @@
             </field>
         </record>
 
+        <!--view search-->
+        <record id="hospital_patient_view_search" model="ir.ui.view">
+            <field name="name">hospital.patient.view.search</field>
+            <field name="model">hospital.patient</field>
+            <field name="arch" type="xml">
+                <search string="Busqueda Patient">
+                    <!--Busqueda-->
+                    <field name="name"/>
+                    <field name="full_name"/>
+                    <field name="father_last_name"/>
+                    <field name="mother_last_name"/>
+                    <field name="sexo"/>
+                    <field name="number_document"/>
+
+                    <!--filter-->
+                    <filter name="sexo_h" string="Hombre" domain="[('sexo','in',['H'])]"/>
+                    <filter name="sexo_f" string="Mujer" domain="[('sexo','in',['F'])]"/>
+
+                </search>
+            </field>
+        </record>
+
         <!--view action-->
         <record id="hospital_patient_view_action" model="ir.actions.act_window">
             <field name="name">Pacientes</field>

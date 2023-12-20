@@ -100,6 +100,28 @@
             </field>
         </record>
 
+        <!--view search-->
+        <record id="hospital_examen_auxiliar_view_search" model="ir.ui.view">
+            <field name="name">hospital.examen.auxiliar.view.search</field>
+            <field name="model">hospital.examen.auxiliar</field>
+            <field name="arch" type="xml">
+                <search string="Busqueda Examen Auxiliar">
+                    <!--Busqueda-->
+                    <field name="name"/>
+                    <field name="type_examen"/>
+                    <field name="patient_id"/>
+                    <field name="document"/>
+                    <field name="sexo"/>
+                    <field name="history_clinic_id"/>
+
+                    <!--filter-->
+                    <filter name="sexo_h" string="Hombre" domain="[('sexo','in',['H'])]"/>
+                    <filter name="sexo_f" string="Mujer" domain="[('sexo','in',['F'])]"/>
+
+                </search>
+            </field>
+        </record>
+
         <!--view action-->
         <record id="hospital_examen_auxiliar_view_action" model="ir.actions.act_window">
             <field name="name">Examen Auxiliar</field>

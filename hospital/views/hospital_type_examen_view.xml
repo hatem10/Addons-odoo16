@@ -41,6 +41,20 @@
             </field>
         </record>
 
+        <!--view search-->
+        <record id="hospital_type_examen_view_search" model="ir.ui.view">
+            <field name="name">hospital.type.examen.view.search</field>
+            <field name="model">hospital.type.examen</field>
+            <field name="arch" type="xml">
+                <search string="Busqueda Tipo Examen">
+                    <!--Busqueda-->
+                    <field name="code"/>
+                    <field name="name"/>
+
+                </search>
+            </field>
+        </record>
+
         <!--view action-->
         <record id="hospital_type_examen_view_action" model="ir.actions.act_window">
             <field name="name">Tipos Examen</field>
