@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_hospital_examen_auxiliar">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+
+                   <t t-foreach="data_examen_aux" t-as="exam_aux">
+                       <div class="border border-black" style="padding-top:10px;padding-bottom:10px;padding-left:5px;">
+                           <div class="row">
+                                <div class="col-3">Nombre Y Apellidos</div>
+                                <div class="col-3"><t t-esc="exam_aux['patient']"/></div>
+                                <div class="col-3">Nro de Histori Clinica</div>
+                                <div class="col-3"><t t-esc="exam_aux['nr_history_clini']"/></div>
+                           </div>
+
+                           <div class="row">
+                               <div class="col-3">Documento de Identidad</div>
+                               <div class="col-3"><t t-esc="exam_aux['number_document']"/></div>
+                               <div class="col-3">Tipo de Seguro</div>
+                               <div class="col-3"><t t-esc="exam_aux['type_seguro']"/></div>
+                           </div>
+
+                           <div class="row">
+                               <div class="col-3">Sexo</div>
+                               <div class="col-3"><t t-esc="exam_aux['sexo']"/></div>
+                               <div class="col-3">Plan de Salud</div>
+                               <div class="col-3">2023</div>
+                           </div>
+                       </div>
+
+                       <div class="border border-black" style="padding-top:10px;padding-bottom:10px;padding-left:5px;">
+                           <div class="row">
+                               <div class="col-3">Acto Medico</div>
+                               <div class="col-3"><t t-esc="exam_aux['acto_medico']"/></div>
+                               <div class="col-3">Fecha Atención</div>
+                               <div class="col-3"><t t-esc="exam_aux['date_atention']"/></div>
+                           </div>
+
+                           <div class="row">
+                               <div class="col-3">Area Hospitalaria</div>
+                               <div class="col-3">Consult Externa</div>
+                               <div class="col-3">Servicio Hospitaliario</div>
+                               <div class="col-3"><t t-esc="exam_aux['speciality']"/></div>
+                           </div>
+
+                           <div class="row">
+                               <div class="col-3">Profesional Medico</div>
+                               <div class="col-3"><t t-esc="exam_aux['name_doctor']"/></div>
+                               <div class="col-3">Actividad Medica</div>
+                               <div class="col-3"><t t-esc="exam_aux['activity_specific']"/></div>
+                           </div>
+                       </div>
+
+                       <div class="border" style="padding-top:10px;padding-bottom:10px;padding-left:5px;">
+                           <div class="row">
+                               <div>
+                                   <h3>DOMICILIO Y DATOS DE CONTACTO DEL PACIENTE</h3>
+                               </div>
+                               <div class="col-2">Departamento</div>
+                               <div class="col-2"><t t-esc="exam_aux['department']"/></div>
+                               <div class="col-2">Provincia</div>
+                               <div class="col-2"><t t-esc="exam_aux['province']"/></div>
+                               <div class="col-2">Distrito</div>
+                               <div class="col-2"><t t-esc="exam_aux['district']"/></div>
+                           </div>
+
+                           <div class="row">
+                               <div class="col-2">Dirección</div>
+                               <div class="col-2"><t t-esc="exam_aux['address']"/></div>
+                           </div>
+
+                           <div class="row">
+                               <div class="col-2">Celular</div>
+                               <div class="col-2"><t t-esc="exam_aux['mobile']"/></div>
+                               <div class="col-2">Telefono Fijo</div>
+                               <div class="col-2"><t t-esc="exam_aux['phone']"/></div>
+                               <div class="col-2">Email</div>
+                               <div class="col-2"><t t-esc="exam_aux['email']"/></div>
+                           </div>
+                       </div>
+                   </t>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

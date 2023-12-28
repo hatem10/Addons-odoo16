@@ -14,14 +14,19 @@
         "data/hospital_doctor.xml",
         "data/hospital_history_clinic.xml",
         "data/hospital_type_examen.xml",
+        "data/hospital_speciality.xml",
         #views
         "views/hospital_patient_view.xml",
         "views/hospital_doctor_view.xml",
         "views/hospital_history_clinic_view.xml",
         "views/hospital_examen_auxiliar_view.xml",
         "views/hospital_type_examen_view.xml",
+        "views/hospital_speciality_view.xml",
         "views/menu.xml",
         "static/template/patient.xml",
+        #report
+        "report/hospital_examen_auxiliar.xml",
+        "report/action_report.xml",
         #security
         "security/res_groups.xml",
         "security/ir.model.access.csv"

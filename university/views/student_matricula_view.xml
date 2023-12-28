@@ -69,7 +69,7 @@
                     <!--filter-->
                     <filter name="state_matricula_draft" string="Borrador" domain="[('state_matricula','=','draft')]"/>
                     <filter name="state_matricula_approved" string="Aprobado" domain="[('state_matricula','=','approved')]"/>
-                    <filter name="state_matricula_draft" string="Realizado" domain="[('state_matricula','=','done')]"/>
+                    <filter name="state_matricula_done" string="Realizado" domain="[('state_matricula','=','done')]"/>
                 </search>
             </field>
         </record>
@@ -79,6 +79,11 @@
             <field name="name">Matricula</field>
             <field name="res_model">university.student.matricula</field>
             <field name="view_mode">tree,form</field>
+            <field name="context">
+                {
+                    "search_default_state_matricula_done":True
+                }
+            </field>
             <field name="target">current</field>
         </record>
     </data>

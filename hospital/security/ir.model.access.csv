@@ -5,5 +5,6 @@ access_admin_hospital_history_clinic,access.admin.hospital.history.clinic,model_
 access_admin_hospital_doctor,access.admin.hospital.doctor,model_hospital_doctor,group_admin_hospital,1,1,1,1
 access_admin_hospital_type_examen,access.admin.hospital.type.examen,model_hospital_type_examen,group_admin_hospital,1,1,1,1
 access_admin_hospital_examen_auxiliar,access.admin.hospital.examen.auxiliar,model_hospital_examen_auxiliar,group_admin_hospital,1,1,1,1
+access_admin_hospital_speciality,access.admin.hospital.speciality,model_hospital_speciality,group_admin_hospital,1,1,1,1
 
 access_user_hospital_patient,access.user.hospital.patient,hospital.model_hospital_patient,group_user_hospital,1,0,1,0

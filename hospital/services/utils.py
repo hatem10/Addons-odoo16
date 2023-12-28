@@ -19,3 +19,8 @@ TYPE_SEGURO = [
     ("c_externa","Consulta Externa"),
     ("c_interna","Consulta Interna")
 ]
+
+TYPE_ACIVITES = [
+    ("c_medica","Consulta Medica"),
+    ("c_emergency","Consulta Emergencia")
+]

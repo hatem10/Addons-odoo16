@@ -53,5 +53,11 @@
                   action="hospital_examen_auxiliar_view_action"
                   sequence="2"/>
 
+        <!--Especialidad-->
+        <menuitem id="submenu_hospital_speciality"
+                  name="Especialidades"
+                  parent="menu_hospital"
+                  action="hospital_speciality_view_action"
+                  sequence="1"/>
     </data>
 </odoo>

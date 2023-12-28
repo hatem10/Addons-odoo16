@@ -41,6 +41,19 @@
                             </group>
                         </group>
 
+                        <group>
+                            <group>
+                                <field name="acto_medico"/>
+                                <field name="doctor_id"/>
+                                <field name="activity_specific"/>
+                            </group>
+
+                            <group>
+                                <field name="date_atention"/>
+                                <field name="speciality_id"/>
+                            </group>
+                        </group>
+
                         <separator string="DOMICILIO Y DATOS DE CONTACTO DEL PACIENTE"/>
                         <group>
                             <group>

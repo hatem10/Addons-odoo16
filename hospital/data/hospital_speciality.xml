@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+        <record id="hospital_speciality_1" model="hospital.speciality">
+            <field name="name">DermatologíaL</field>
+            <field name="code">DER1420</field>
+        </record>
+
+        <record id="hospital_speciality_2" model="hospital.speciality">
+            <field name="name">Cardiología</field>
+            <field name="code">CAR2320</field>
+        </record>
+
+        <record id="hospital_speciality_3" model="hospital.speciality">
+            <field name="name">Neurología</field>
+            <field name="code">NEU3520</field>
+        </record>
+
+        <record id="hospital_speciality_4" model="hospital.speciality">
+            <field name="name">Geriatría</field>
+            <field name="code">GER5420</field>
+        </record>
+
+        <record id="hospital_speciality_5" model="hospital.speciality">
+            <field name="name">Pediatría</field>
+            <field name="code">PED9820</field>
+        </record>
+
+        <record id="hospital_speciality_6" model="hospital.speciality">
+            <field name="name">Nefrología</field>
+            <field name="code">NEF13820</field>
+        </record>
+
+        <record id="hospital_speciality_7" model="hospital.speciality">
+            <field name="name">Otorrinolaringología</field>
+            <field name="code">OTO08820</field>
+        </record>
+
+        <record id="hospital_speciality_8" model="hospital.speciality">
+            <field name="name">Genética</field>
+            <field name="code">GEN252820</field>
+        </record>
+
+    </data>
+</odoo>
